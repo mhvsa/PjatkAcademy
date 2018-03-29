@@ -33,6 +33,11 @@ namespace DeansOffice
         {
             var form = new StudentDialog();
             form.ShowDialog();
+            if(form.DialogResult == DialogResult.OK)
+            {
+                ZaladujDane();
+            }
+            
         }
 
         private void EditStudentToolStripMenuItem_Click(object sender, EventArgs e)

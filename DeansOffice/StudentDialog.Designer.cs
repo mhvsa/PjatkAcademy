@@ -60,178 +60,200 @@
             // 
             // IndexNumberTextBox
             // 
-            this.IndexNumberTextBox.Location = new System.Drawing.Point(590, 286);
+            this.IndexNumberTextBox.Location = new System.Drawing.Point(295, 149);
+            this.IndexNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.IndexNumberTextBox.Name = "IndexNumberTextBox";
-            this.IndexNumberTextBox.Size = new System.Drawing.Size(193, 31);
+            this.IndexNumberTextBox.Size = new System.Drawing.Size(98, 20);
             this.IndexNumberTextBox.TabIndex = 47;
             // 
             // IndexNumberLabel
             // 
             this.IndexNumberLabel.AutoSize = true;
-            this.IndexNumberLabel.Location = new System.Drawing.Point(438, 290);
+            this.IndexNumberLabel.Location = new System.Drawing.Point(219, 151);
+            this.IndexNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IndexNumberLabel.Name = "IndexNumberLabel";
-            this.IndexNumberLabel.Size = new System.Drawing.Size(156, 25);
+            this.IndexNumberLabel.Size = new System.Drawing.Size(78, 13);
             this.IndexNumberLabel.TabIndex = 46;
             this.IndexNumberLabel.Text = "Numer indeksu";
             // 
             // DepartmentComboBox
             // 
             this.DepartmentComboBox.FormattingEnabled = true;
-            this.DepartmentComboBox.Location = new System.Drawing.Point(591, 240);
+            this.DepartmentComboBox.Location = new System.Drawing.Point(296, 125);
+            this.DepartmentComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.DepartmentComboBox.Name = "DepartmentComboBox";
-            this.DepartmentComboBox.Size = new System.Drawing.Size(193, 33);
+            this.DepartmentComboBox.Size = new System.Drawing.Size(98, 21);
             this.DepartmentComboBox.TabIndex = 45;
             // 
             // DepartmentLabel
             // 
             this.DepartmentLabel.AutoSize = true;
-            this.DepartmentLabel.Location = new System.Drawing.Point(501, 244);
+            this.DepartmentLabel.Location = new System.Drawing.Point(250, 127);
+            this.DepartmentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DepartmentLabel.Name = "DepartmentLabel";
-            this.DepartmentLabel.Size = new System.Drawing.Size(88, 25);
+            this.DepartmentLabel.Size = new System.Drawing.Size(46, 13);
             this.DepartmentLabel.TabIndex = 44;
             this.DepartmentLabel.Text = "Wydział";
             // 
             // BirthdayDateTimePicker
             // 
             this.BirthdayDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.BirthdayDateTimePicker.Location = new System.Drawing.Point(591, 195);
+            this.BirthdayDateTimePicker.Location = new System.Drawing.Point(296, 101);
+            this.BirthdayDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.BirthdayDateTimePicker.Name = "BirthdayDateTimePicker";
-            this.BirthdayDateTimePicker.Size = new System.Drawing.Size(193, 31);
+            this.BirthdayDateTimePicker.Size = new System.Drawing.Size(98, 20);
             this.BirthdayDateTimePicker.TabIndex = 43;
             // 
             // BirthdayLabel
             // 
             this.BirthdayLabel.AutoSize = true;
-            this.BirthdayLabel.Location = new System.Drawing.Point(438, 199);
+            this.BirthdayLabel.Location = new System.Drawing.Point(219, 103);
+            this.BirthdayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BirthdayLabel.Name = "BirthdayLabel";
-            this.BirthdayLabel.Size = new System.Drawing.Size(158, 25);
+            this.BirthdayLabel.Size = new System.Drawing.Size(79, 13);
             this.BirthdayLabel.TabIndex = 42;
             this.BirthdayLabel.Text = "Data urodzenia";
             // 
             // CityLabel
             // 
             this.CityLabel.AutoSize = true;
-            this.CityLabel.Location = new System.Drawing.Point(111, 334);
+            this.CityLabel.Location = new System.Drawing.Point(56, 174);
+            this.CityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CityLabel.Name = "CityLabel";
-            this.CityLabel.Size = new System.Drawing.Size(76, 25);
+            this.CityLabel.Size = new System.Drawing.Size(38, 13);
             this.CityLabel.TabIndex = 41;
             this.CityLabel.Text = "Miasto";
             // 
             // CityTextBox
             // 
-            this.CityTextBox.Location = new System.Drawing.Point(195, 332);
+            this.CityTextBox.Location = new System.Drawing.Point(98, 173);
+            this.CityTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CityTextBox.Name = "CityTextBox";
-            this.CityTextBox.Size = new System.Drawing.Size(202, 31);
+            this.CityTextBox.Size = new System.Drawing.Size(103, 20);
             this.CityTextBox.TabIndex = 40;
             // 
             // CitizenshipLabel
             // 
             this.CitizenshipLabel.AutoSize = true;
-            this.CitizenshipLabel.Location = new System.Drawing.Point(45, 287);
+            this.CitizenshipLabel.Location = new System.Drawing.Point(22, 149);
+            this.CitizenshipLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CitizenshipLabel.Name = "CitizenshipLabel";
-            this.CitizenshipLabel.Size = new System.Drawing.Size(145, 25);
+            this.CitizenshipLabel.Size = new System.Drawing.Size(73, 13);
             this.CitizenshipLabel.TabIndex = 39;
             this.CitizenshipLabel.Text = "Obywatelstwo";
             // 
             // CitizenshipTextBox
             // 
-            this.CitizenshipTextBox.Location = new System.Drawing.Point(195, 286);
+            this.CitizenshipTextBox.Location = new System.Drawing.Point(98, 149);
+            this.CitizenshipTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.CitizenshipTextBox.Name = "CitizenshipTextBox";
-            this.CitizenshipTextBox.Size = new System.Drawing.Size(202, 31);
+            this.CitizenshipTextBox.Size = new System.Drawing.Size(103, 20);
             this.CitizenshipTextBox.TabIndex = 38;
             // 
             // PassportNumberLabel
             // 
             this.PassportNumberLabel.AutoSize = true;
-            this.PassportNumberLabel.Location = new System.Drawing.Point(17, 241);
+            this.PassportNumberLabel.Location = new System.Drawing.Point(8, 125);
+            this.PassportNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PassportNumberLabel.Name = "PassportNumberLabel";
-            this.PassportNumberLabel.Size = new System.Drawing.Size(176, 25);
+            this.PassportNumberLabel.Size = new System.Drawing.Size(87, 13);
             this.PassportNumberLabel.TabIndex = 37;
             this.PassportNumberLabel.Text = "Numer paszportu";
             // 
             // PassportNumberTextBox
             // 
-            this.PassportNumberTextBox.Location = new System.Drawing.Point(195, 239);
+            this.PassportNumberTextBox.Location = new System.Drawing.Point(98, 124);
+            this.PassportNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PassportNumberTextBox.Name = "PassportNumberTextBox";
-            this.PassportNumberTextBox.Size = new System.Drawing.Size(202, 31);
+            this.PassportNumberTextBox.Size = new System.Drawing.Size(103, 20);
             this.PassportNumberTextBox.TabIndex = 36;
             // 
             // PeselLabel
             // 
             this.PeselLabel.AutoSize = true;
-            this.PeselLabel.Location = new System.Drawing.Point(106, 196);
+            this.PeselLabel.Location = new System.Drawing.Point(53, 102);
+            this.PeselLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PeselLabel.Name = "PeselLabel";
-            this.PeselLabel.Size = new System.Drawing.Size(80, 25);
+            this.PeselLabel.Size = new System.Drawing.Size(41, 13);
             this.PeselLabel.TabIndex = 35;
             this.PeselLabel.Text = "PESEL";
             // 
             // PeselTextBox
             // 
-            this.PeselTextBox.Location = new System.Drawing.Point(195, 194);
+            this.PeselTextBox.Location = new System.Drawing.Point(98, 101);
+            this.PeselTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.PeselTextBox.Name = "PeselTextBox";
-            this.PeselTextBox.Size = new System.Drawing.Size(202, 31);
+            this.PeselTextBox.Size = new System.Drawing.Size(103, 20);
             this.PeselTextBox.TabIndex = 34;
             // 
             // TelephoneTextBox
             // 
-            this.TelephoneTextBox.Location = new System.Drawing.Point(195, 149);
+            this.TelephoneTextBox.Location = new System.Drawing.Point(98, 77);
+            this.TelephoneTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.TelephoneTextBox.Name = "TelephoneTextBox";
-            this.TelephoneTextBox.Size = new System.Drawing.Size(202, 31);
+            this.TelephoneTextBox.Size = new System.Drawing.Size(103, 20);
             this.TelephoneTextBox.TabIndex = 32;
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(195, 105);
+            this.EmailTextBox.Location = new System.Drawing.Point(98, 55);
+            this.EmailTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(202, 31);
+            this.EmailTextBox.Size = new System.Drawing.Size(103, 20);
             this.EmailTextBox.TabIndex = 31;
             // 
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Location = new System.Drawing.Point(123, 105);
+            this.EmailLabel.Location = new System.Drawing.Point(62, 55);
+            this.EmailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(65, 25);
+            this.EmailLabel.Size = new System.Drawing.Size(32, 13);
             this.EmailLabel.TabIndex = 30;
             this.EmailLabel.Text = "Email";
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(195, 61);
+            this.LastNameTextBox.Location = new System.Drawing.Point(98, 32);
+            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(202, 31);
+            this.LastNameTextBox.Size = new System.Drawing.Size(103, 20);
             this.LastNameTextBox.TabIndex = 29;
             // 
             // PictureBox
             // 
-            this.PictureBox.Location = new System.Drawing.Point(632, 16);
+            this.PictureBox.Location = new System.Drawing.Point(316, 8);
+            this.PictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(151, 153);
+            this.PictureBox.Size = new System.Drawing.Size(76, 80);
             this.PictureBox.TabIndex = 28;
             this.PictureBox.TabStop = false;
             // 
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
-            this.LastNameLabel.Location = new System.Drawing.Point(87, 61);
+            this.LastNameLabel.Location = new System.Drawing.Point(44, 32);
+            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(104, 25);
+            this.LastNameLabel.Size = new System.Drawing.Size(53, 13);
             this.LastNameLabel.TabIndex = 27;
             this.LastNameLabel.Text = "Nazwisko";
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(195, 16);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(98, 8);
+            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(202, 31);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(103, 20);
             this.FirstNameTextBox.TabIndex = 26;
             // 
             // FirstNameLabel
             // 
             this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Location = new System.Drawing.Point(136, 16);
+            this.FirstNameLabel.Location = new System.Drawing.Point(68, 8);
+            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(51, 25);
+            this.FirstNameLabel.Size = new System.Drawing.Size(26, 13);
             this.FirstNameLabel.TabIndex = 25;
             this.FirstNameLabel.Text = "Imię";
             // 
@@ -239,9 +261,10 @@
             // 
             this.CancelButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.CancelButton.Location = new System.Drawing.Point(651, 26);
+            this.CancelButton.Location = new System.Drawing.Point(326, 14);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(135, 60);
+            this.CancelButton.Size = new System.Drawing.Size(68, 31);
             this.CancelButton.TabIndex = 1;
             this.CancelButton.Text = "Anuluj";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -250,19 +273,22 @@
             // 
             this.OkButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.OkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.OkButton.Location = new System.Drawing.Point(29, 21);
+            this.OkButton.Location = new System.Drawing.Point(14, 11);
+            this.OkButton.Margin = new System.Windows.Forms.Padding(2);
             this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(105, 66);
+            this.OkButton.Size = new System.Drawing.Size(52, 34);
             this.OkButton.TabIndex = 0;
             this.OkButton.Text = "Ok";
             this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
             // TelephoneLabel
             // 
             this.TelephoneLabel.AutoSize = true;
-            this.TelephoneLabel.Location = new System.Drawing.Point(106, 152);
+            this.TelephoneLabel.Location = new System.Drawing.Point(53, 79);
+            this.TelephoneLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TelephoneLabel.Name = "TelephoneLabel";
-            this.TelephoneLabel.Size = new System.Drawing.Size(84, 25);
+            this.TelephoneLabel.Size = new System.Drawing.Size(43, 13);
             this.TelephoneLabel.TabIndex = 33;
             this.TelephoneLabel.Text = "Telefon";
             // 
@@ -271,16 +297,17 @@
             this.OptionsPanel.Controls.Add(this.CancelButton);
             this.OptionsPanel.Controls.Add(this.OkButton);
             this.OptionsPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.OptionsPanel.Location = new System.Drawing.Point(0, 385);
+            this.OptionsPanel.Location = new System.Drawing.Point(0, 200);
+            this.OptionsPanel.Margin = new System.Windows.Forms.Padding(2);
             this.OptionsPanel.Name = "OptionsPanel";
-            this.OptionsPanel.Size = new System.Drawing.Size(812, 117);
+            this.OptionsPanel.Size = new System.Drawing.Size(406, 61);
             this.OptionsPanel.TabIndex = 24;
             // 
             // StudentDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 502);
+            this.ClientSize = new System.Drawing.Size(406, 261);
             this.Controls.Add(this.IndexNumberTextBox);
             this.Controls.Add(this.IndexNumberLabel);
             this.Controls.Add(this.DepartmentComboBox);
@@ -306,6 +333,7 @@
             this.Controls.Add(this.TelephoneLabel);
             this.Controls.Add(this.OptionsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StudentDialog";
