@@ -1,0 +1,10 @@
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\bin\Debug\DeansOffice.exe.config
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\bin\Debug\DeansOffice.exe
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\bin\Debug\DeansOffice.pdb
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.csprojResolveAssemblyReference.cache
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.MainForm.resources
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.Properties.Resources.resources
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.StudentDialog.resources
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.csproj.GenerateResource.Cache
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.exe
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.pdb
