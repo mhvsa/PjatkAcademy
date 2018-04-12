@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DeansOfficeModelsStoreContainer" CdmEntityContainer="DeansOfficeDB">
+    <EntitySetMapping Name="Semestrs">
+      <EntityTypeMapping TypeName="DeansOfficeModels.Semestr">
+        <MappingFragment StoreEntitySet="Semestr">
+          <ScalarProperty Name="IdSemestr" ColumnName="IdSemestr" />
+          <ScalarProperty Name="NazwaSemestr" ColumnName="NazwaSemestr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="DeansOfficeModels.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="IdStudent" ColumnName="IdStudent" />
+          <ScalarProperty Name="Imie" ColumnName="Imie" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="NumerPaszportu" ColumnName="NumerPaszportu" />
+          <ScalarProperty Name="Obywatelstwo" ColumnName="Obywatelstwo" />
+          <ScalarProperty Name="NumerIndeksu" ColumnName="NumerIndeksu" />
+          <ScalarProperty Name="RokZapisania" ColumnName="RokZapisania" />
+          <ScalarProperty Name="IdSemestr" ColumnName="IdSemestr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeansOfficeModels.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Semestr">
+    <Key>
+      <PropertyRef Name="IdSemestr" />
+    </Key>
+    <Property Name="IdSemestr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NazwaSemestr" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="IdStudent" />
+    </Key>
+    <Property Name="IdStudent" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imie" Type="varchar" MaxLength="20" />
+    <Property Name="Nazwisko" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="20" />
+    <Property Name="Telefon" Type="varchar" MaxLength="20" />
+    <Property Name="Pesel" Type="varchar" MaxLength="20" />
+    <Property Name="NumerPaszportu" Type="varchar" MaxLength="20" />
+    <Property Name="Obywatelstwo" Type="varchar" MaxLength="20" />
+    <Property Name="NumerIndeksu" Type="varchar" MaxLength="20" />
+    <Property Name="RokZapisania" Type="varchar" MaxLength="20" />
+    <Property Name="IdSemestr" Type="int" />
+  </EntityType>
+  <Association Name="Semestr_Student_FK1">
+    <End Role="Semestr" Type="Self.Semestr" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semestr">
+        <PropertyRef Name="IdSemestr" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdSemestr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DeansOfficeModelsStoreContainer">
+    <EntitySet Name="Semestr" EntityType="Self.Semestr" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Semestr_Student_FK1" Association="Self.Semestr_Student_FK1">
+      <End Role="Semestr" EntitySet="Semestr" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

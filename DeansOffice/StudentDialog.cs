@@ -13,10 +13,11 @@ namespace DeansOffice
 {
     public partial class StudentDialog : Form
     {
-
+        private Student student = null;
         private const String _rokZapisaniaMock = "2016";
         private const int _semestrMock = 2;
- 
+        private const string _nrIndeksuMock = "s15092";
+
         public StudentDialog()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace DeansOffice
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-
+            
             var imie = FirstNameTextBox.Text;
             var nazwisko = LastNameTextBox.Text;
             var email = EmailTextBox.Text;
@@ -35,30 +36,62 @@ namespace DeansOffice
             // DO ZMIANY
             var rokZapisania = _rokZapisaniaMock;
             var semestr = _semestrMock;
+            var nrIndeksuMock = IndexNumberTextBox.Text;
 
-            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15092;Integrated Security=True"))
+            var db = new DeansOfficeDB();
+            var student = new Student()
             {
-                var com = new SqlCommand();
-                com.Connection = con;
-                com.CommandText = "insert into Student values(@imie,@nazwisko,@email,@telefon,@pesel,@nrPaszportu,@obywatelstwo,@index,@rokZapisania,@semestr)";
-                com.Parameters.Add("@imie", SqlDbType.NVarChar).Value = imie;
-                com.Parameters.Add("@nazwisko", SqlDbType.NVarChar).Value = nazwisko;
-                com.Parameters.Add("@email", SqlDbType.NVarChar).Value = email;
-                com.Parameters.Add("@telefon", SqlDbType.NVarChar).Value = "123123123";
-                com.Parameters.Add("@pesel", SqlDbType.NVarChar).Value = pesel;
-                com.Parameters.Add("@nrPaszportu", SqlDbType.NVarChar).Value = nrPaszportu;
-                com.Parameters.Add("@obywatelstwo", SqlDbType.NVarChar).Value = obywatelstwo;
-                com.Parameters.Add("@index", SqlDbType.NVarChar).Value = index;
-                com.Parameters.Add("@rokZapisania", SqlDbType.NVarChar).Value = rokZapisania;
-                com.Parameters.Add("@semestr", SqlDbType.Int).Value = semestr;
+                Email = email,
+                IdSemestr = _semestrMock,
+                Imie = imie,
+                Nazwisko = nazwisko,
+                Pesel = pesel,
+                NumerIndeksu = nrIndeksuMock,
+                NumerPaszportu = nrPaszportu,
+                Obywatelstwo = obywatelstwo,
+                Semestr = db.Semestrs.ToList()[0],
+                RokZapisania = rokZapisania,
+                Telefon = TelephoneTextBox.Text
+            };
 
-                con.Open();
-                com.ExecuteNonQuery();
-                com.Dispose();
-
+            if (this.student == null)
+            {
+                db.Students.Add(student);
+                db.SaveChanges();
                 this.DialogResult = DialogResult.OK;
             }
+            else {
+                var studentToEdit = db.Students.Where(s => s.IdStudent == this.student.IdStudent).First();
+                studentToEdit.Email = email;
+                studentToEdit.IdSemestr = _semestrMock;
+                studentToEdit.Imie = imie;
+                studentToEdit.Nazwisko = nazwisko;
+                studentToEdit.Pesel = pesel;
+                studentToEdit.NumerIndeksu = nrIndeksuMock;
+                studentToEdit.NumerPaszportu = nrPaszportu;
+                studentToEdit.Obywatelstwo = obywatelstwo;
+                studentToEdit.Semestr = db.Semestrs.ToList()[0];
+                studentToEdit.RokZapisania = rokZapisania;
+                studentToEdit.Telefon = TelephoneTextBox.Text;
+                db.SaveChanges();
+                this.DialogResult = DialogResult.OK;
+            }
+            
+           
 
         }
+
+        public void EditStudent(Student student) {
+            FirstNameTextBox.Text = student.Imie;
+            LastNameTextBox.Text = student.Nazwisko;
+            IndexNumberTextBox.Text = student.NumerIndeksu;
+            EmailTextBox.Text = student.Email;
+            CitizenshipTextBox.Text = student.Obywatelstwo;
+            PassportNumberTextBox.Text = student.NumerPaszportu;
+            PeselTextBox.Text = student.Pesel;
+
+            this.student = student;
+        }
+
     }
 }

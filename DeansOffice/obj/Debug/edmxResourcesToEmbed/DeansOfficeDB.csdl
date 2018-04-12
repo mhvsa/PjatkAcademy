@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DeansOfficeModels" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Semestr">
+    <Key>
+      <PropertyRef Name="IdSemestr" />
+    </Key>
+    <Property Name="IdSemestr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NazwaSemestr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Students" Relationship="Self.Semestr_Student_FK1" FromRole="Semestr" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="IdStudent" />
+    </Key>
+    <Property Name="IdStudent" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imie" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Nazwisko" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Pesel" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NumerPaszportu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Obywatelstwo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NumerIndeksu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="RokZapisania" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="IdSemestr" Type="Int32" />
+    <NavigationProperty Name="Semestr" Relationship="Self.Semestr_Student_FK1" FromRole="Student" ToRole="Semestr" />
+  </EntityType>
+  <Association Name="Semestr_Student_FK1">
+    <End Role="Semestr" Type="Self.Semestr" Multiplicity="0..1" />
+    <End Role="Student" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semestr">
+        <PropertyRef Name="IdSemestr" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="IdSemestr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DeansOfficeDB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Semestrs" EntityType="Self.Semestr" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <AssociationSet Name="Semestr_Student_FK1" Association="Self.Semestr_Student_FK1">
+      <End Role="Semestr" EntitySet="Semestrs" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

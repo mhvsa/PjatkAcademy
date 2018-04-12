@@ -134,7 +134,7 @@
             // CloseToolStripMenuItem
             // 
             this.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem";
-            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.CloseToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.CloseToolStripMenuItem.Text = "Zamknij";
             this.CloseToolStripMenuItem.Click += new System.EventHandler(this.CloseToolStripMenuItem_Click);
             // 
@@ -179,13 +179,17 @@
             // 
             // StudentsDataGridView
             // 
+            this.StudentsDataGridView.AllowUserToAddRows = false;
+            this.StudentsDataGridView.AllowUserToDeleteRows = false;
             this.StudentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentsDataGridView.ContextMenuStrip = this.GridViewContextMenuStrip;
             this.StudentsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.StudentsDataGridView.Location = new System.Drawing.Point(0, 80);
             this.StudentsDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.StudentsDataGridView.Name = "StudentsDataGridView";
+            this.StudentsDataGridView.ReadOnly = true;
             this.StudentsDataGridView.RowTemplate.Height = 33;
+            this.StudentsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.StudentsDataGridView.Size = new System.Drawing.Size(543, 201);
             this.StudentsDataGridView.TabIndex = 3;
             // 

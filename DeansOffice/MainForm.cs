@@ -14,11 +14,12 @@ namespace DeansOffice
     public partial class MainForm : Form
     {
 
-        private List<Student> _students = new List<Student>();
+        private List<DeansOffice.Student> _students = new List<DeansOffice.Student>();
         private Dictionary<int,string> _semesters = new Dictionary<int,string>();
 
         public MainForm()
         {
+            DeansOfficeDB db = new DeansOfficeDB();
             InitializeComponent();
             ZaladujDane();
             ZaladujComboBox();
@@ -42,109 +43,57 @@ namespace DeansOffice
 
         private void EditStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO
+            var studentID = (int)StudentsDataGridView.SelectedRows[0].Cells[0].Value;
+            DeansOfficeDB db = new DeansOfficeDB();
+
+            //db.Students.ToList().Where(s=>s.IdStudent = student.Cells.)
+            var form = new StudentDialog();
+            form.EditStudent(db.Students.ToList().Where(s=>s.IdStudent == studentID).ToList()[0]);
+            form.ShowDialog();
+            if (form.DialogResult == DialogResult.OK)
+            {
+                ZaladujDane();
+                ZaladujComboBox();
+
+            }
         }
 
         private void RemoveStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //TODO
+            DeansOfficeDB db = new DeansOfficeDB();
+            var studentID = (int)StudentsDataGridView.SelectedRows[0].Cells[0].Value;
+            var student = db.Students.Where(s => s.IdStudent == studentID).First();
+            db.Students.Remove(student);
+            db.SaveChanges();
+            ZaladujDane();
+            ZaladujComboBox();
         }
 
         private void ZaladujDane()
         {
-            
+            DeansOfficeDB db = new DeansOfficeDB();
 
-            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15092;Integrated Security=True"))
-            {
-                var com = new SqlCommand();
-                com.Connection = con;
-                com.CommandText = "select * from Student";
-
-                con.Open();
-
-                using(var dr = com.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        var newStudent = new Student();
-                        newStudent.IdStudent = (int)dr["IdStudent"];
-                        newStudent.Imie = dr["Imie"].ToString();
-                        newStudent.Nazwisko = dr["Nazwisko"].ToString();
-                        newStudent.Email = dr["Email"].ToString();
-                        newStudent.Telefon = dr["Telefon"].ToString();
-                        _students.Add(newStudent);
-                    }
-                }
-                com.Dispose();
-            }
-
-            BindingSource bs = new BindingSource();
-            bs.DataSource = _students;
-            StudentsDataGridView.DataSource = bs;
+            StudentsDataGridView.DataSource = db.Students.ToList();
         }
 
         private void ZaladujComboBox() {
-            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15092;Integrated Security=True"))
-            {
-                var com = new SqlCommand();
-                com.Connection = con;
-                com.CommandText = "select * from Semestr";
 
-                con.Open();
+            DeansOfficeDB db = new DeansOfficeDB();
 
-                using (var dr = com.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        var newSemestr = new Semestr();
-                        newSemestr.Nazwa = dr["NazwaSemestr"].ToString();
-                        newSemestr.IdSemestr = (int)dr["IdSemestr"];
-                        _semesters.Add(newSemestr.IdSemestr, newSemestr.Nazwa);
-                    }
-                }
-                com.Dispose();
-            }
+            SemesterComboBox.DataSource = db.Semestrs.ToList();
+            SemesterComboBox.DisplayMember = "NazwaSemestr";
 
-            BindingSource bs = new BindingSource();
-            bs.DataSource = _semesters;
-            SemesterComboBox.DataSource = bs;
         }
 
         private void SemesterComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DeansOfficeDB db = new DeansOfficeDB();
 
-            _students = new List<Student>();
-            //  int id = SemesterComboBox.;
-            var control = ((KeyValuePair<int, string>)SemesterComboBox.SelectedItem).Key;
-           
-            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15092;Integrated Security=True"))
-            {
-                var com = new SqlCommand();
-                com.Connection = con;
-                com.CommandText = "select * from Student where IdSemestr = @id";
-                com.Parameters.Add("@id",SqlDbType.Int).Value = control;
 
-                con.Open();
+            var selectedSemestrID = ((Semestr)SemesterComboBox.SelectedValue).IdSemestr;
+            var result = db.Students.ToList().Where((student)=>student.IdSemestr == selectedSemestrID).ToList();
+            StudentsDataGridView.DataSource = result;
 
-                using (var dr = com.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        var newStudent = new Student();
-                        newStudent.IdStudent = (int)dr["IdStudent"];
-                        newStudent.Imie = dr["Imie"].ToString();
-                        newStudent.Nazwisko = dr["Nazwisko"].ToString();
-                        newStudent.Email = dr["Email"].ToString();
-                        newStudent.Telefon = dr["Telefon"].ToString();
-                        _students.Add(newStudent);
-                    }
-                }
-                com.Dispose();
-            }
-
-            BindingSource bs = new BindingSource();
-            bs.DataSource = _students;
-            StudentsDataGridView.DataSource = bs;
         }
     }
 }

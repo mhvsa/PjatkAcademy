@@ -8,3 +8,7 @@ C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.StudentDi
 C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.csproj.GenerateResource.Cache
 C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.exe
 C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\obj\Debug\DeansOffice.pdb
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\bin\Debug\EntityFramework.dll
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\bin\Debug\EntityFramework.xml
+C:\Users\s15092\Desktop\PjatkAcademy\DeansOffice\bin\Debug\EntityFramework.SqlServer.xml
